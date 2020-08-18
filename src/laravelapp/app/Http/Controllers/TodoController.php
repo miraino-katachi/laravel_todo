@@ -40,7 +40,7 @@ class TodoController extends Controller
      * @param TodoRequest $request FormRequest
      * @return void
      */
-    public function register(TodoRequest $request)
+    public function create(TodoRequest $request)
     {
         // テーブルにインサートする項目と値を連想配列にする
         $param = [
@@ -61,7 +61,7 @@ class TodoController extends Controller
      * @param Request $request
      * @return void
      */
-    public function update(Request $request)
+    public function edit(Request $request)
     {
         // 指定IDのTODOリストのレコードを1件取得する。
         $item = DB::table('todo_items')->where('id', $request->id)->get();
@@ -76,7 +76,7 @@ class TodoController extends Controller
      * @param TodoRequest $request
      * @return void
      */
-    public function doUpdate(TodoRequest $request)
+    public function update(TodoRequest $request)
     {
         // 更新する項目と値を連想配列にする
         $param = [

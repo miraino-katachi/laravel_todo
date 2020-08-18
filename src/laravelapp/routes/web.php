@@ -17,8 +17,8 @@
 
 // トップページ
 Route::get('/', 'TodoController@index');
-Route::post('/', 'TodoController@register');
+Route::post('/', 'TodoController@create');
 
 // 更新ページ
-Route::get('/update', 'TodoController@update');
-Route::post('/update', 'TodoController@doUpdate');
+Route::get('/update', 'TodoController@edit');
+Route::post('/update', 'TodoController@update');

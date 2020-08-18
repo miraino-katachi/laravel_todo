@@ -2,6 +2,14 @@
 
 @section('title', 'TODOリスト | 更新')
 
+@section('style')
+<style>
+    input[type="date"] {
+        width: 12rem;
+    }
+</style>
+@endsection
+
 @section('content')
     <form method="POST" action="./update">
         @csrf
