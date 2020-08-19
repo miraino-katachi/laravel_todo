@@ -46,6 +46,8 @@ class TodoController extends Controller
         $param = [
             'expiration_date' => $request->expiration_date,
             'todo_item' => $request->todo_item,
+            'created_at' => date('Y/m/d H:i:s'),
+            'updated_at' => date('Y/m/d H:i:s'),
         ];
 
         // インサート処理を行う。
@@ -84,6 +86,7 @@ class TodoController extends Controller
             'todo_item' => $request->todo_item,
             'is_completed'=>isset($request->is_completed) ? 1 : 0,
             'is_deleted'=>isset($request->is_deleted) ? 1 : 0,
+            'updated_at' => date('Y/m/d H:i:s'),
         ];
 
         // 更新処理を行う
