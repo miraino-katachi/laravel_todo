@@ -7,4 +7,9 @@
 PHP 7.4、Laravel 6、MySQL 5.7で動作確認しています。
 
 ## Laravel 6のインストール方法
+```
 composer create-project "laravel/laravel=6.*" [プロジェクト名] --prefer-dist
+```
+
+## テーブルの作成
+テーブル作成は、Laravelのマイグレーションの機能を使ってください。
